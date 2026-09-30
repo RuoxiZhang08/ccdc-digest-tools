@@ -1,0 +1,6 @@
+interface:
+  display_name: "CCDC Digest Character Report"
+  short_description: "Find special characters in CCDC digest files"
+  default_prompt: "Use $ccdc-digest-character-report to scan my digest folder and create an Excel report."
+policy:
+  allow_implicit_invocation: true
