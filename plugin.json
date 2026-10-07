@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ccdc-digest-tools",
+  "version": "0.1.0",
+  "description": "Scan CCDC digest workbooks for ETL-incompatible characters and create a read-only Excel report.",
+  "author": {
+    "name": "Ruoxi Zhang"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CCDC Digest Tools",
+        "shortDescription": "Find special characters in CCDC digest files.",
+        "longDescription": "Give Codex a digest-folder path to scan CCDC Excel workbooks and produce a read-only report with exact locations, Unicode details, original values, and values with rejected characters removed.",
+        "developerName": "Ruoxi Zhang",
+        "category": "Productivity",
+        "capabilities": [
+          "Read Excel workbooks",
+          "Create Excel reports"
+        ],
+        "defaultPrompt": [
+          "Scan my CCDC digest folder for special characters and create an Excel report."
+        ]
+      }
+    }
+  }
+}
