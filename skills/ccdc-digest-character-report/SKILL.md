@@ -1,15 +1,20 @@
 ---
 name: ccdc-digest-character-report
-description: Scan a folder of CCDC digest Excel workbooks for characters rejected by the CCDC ETL character rule, then create a read-only Excel report with exact cell locations, original values, Unicode details, and values with invalid characters removed. Use when a user provides or wants to provide a digest-folder path and does not want to run CCDC ETL manually.
+description: Scan a folder of CCDC digest Excel workbooks for characters rejected by the CCDC ETL character rule, then create a read-only Excel report with exact cell locations, original values, Unicode details, and values with invalid characters removed. Use when a user provides a digest folder by pasted path or drag-and-drop and does not want to run CCDC ETL manually.
 ---
 
 # CCDC Digest Character Report
 
-Turn one digest-folder path into a plain-language summary and a filterable Excel report. Do not ask the user to run commands or understand the ETL.
+Turn one digest folder into a plain-language summary and a filterable Excel report. Do not ask the user to run commands or understand the ETL.
 
 ## Input
 
-Accept a folder path from the user. If none was supplied, ask only for the folder path and explain how to copy it from Finder when useful.
+Accept either:
+
+- a folder path pasted into the message; or
+- a folder reference created by dragging the folder into the message.
+
+Resolve the supplied path or folder reference to an absolute local directory before scanning. If the dropped item cannot be resolved as a readable directory, ask the user to paste the folder path or drag the folder again. If no folder was supplied, ask only for the folder and explain that they may drag it into the message or paste its path. Do not ask them to run a terminal command.
 
 ## Run the scanner
 
